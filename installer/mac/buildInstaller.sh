@@ -1,8 +1,8 @@
 #!/bin/bash 
 
 # config
-releaseName="Brackets"
-dmgName="${releaseName} Sprint 37"
+releaseName="ABBible5"
+dmgName="${releaseName} Installer"
 format="bzip2"
 encryption="none"
 tmpLayout="./dropDmgConfig/layouts/tempLayout"

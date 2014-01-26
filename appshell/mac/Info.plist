@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>appshell.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>io.brackets.appshell</string>
+	<string>a.bible</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,9 +19,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>0.37.0</string>
+	<string>1.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.37.0</string>
+	<string>1.0</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

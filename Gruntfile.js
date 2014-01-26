@@ -111,7 +111,6 @@ module.exports = function (grunt) {
                 ]
             },
             // FIXME: see stage-mac task issues with copying .app bundles
-            /*
             "mac": {
                 "files": [
                     {
@@ -122,7 +121,6 @@ module.exports = function (grunt) {
                     }
                 ]
             },
-            */
             "linux": {
                 "files": [
                     {
@@ -156,7 +154,7 @@ module.exports = function (grunt) {
                     {
                         "dot"       : true,
                         "expand"    : true,
-                        "cwd"       : "<%= git.www.repo %>/dist",
+                        "cwd"       : "<%= git.www.repo %>",
                         "src"       : ["**", "!**/.git*"],
                         "dest"      : "<%= build.staging %>/www/"
                     }
@@ -187,12 +185,12 @@ module.exports = function (grunt) {
             }
         },
         "build": {
-            "name"              : "Brackets",
+            "name"              : "a.bible",
             "staging"           : staging
         },
         "git": {
             "www": {
-                "repo"      : "../brackets",    // TODO user configurable?
+                "repo"      : "../a.bible",    // TODO user configurable?
                 "branch"    : grunt.option("www-branch") || ""
             },
             "shell": {
