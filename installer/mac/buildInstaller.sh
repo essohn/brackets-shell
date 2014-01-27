@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 # config
-releaseName="ABBible5"
+releaseName="W.Bible"
 dmgName="${releaseName} Installer"
 format="bzip2"
 encryption="none"

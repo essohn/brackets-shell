@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>appshell.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>a.bible</string>
+	<string>A.Bible</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

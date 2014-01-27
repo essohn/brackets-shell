@@ -185,12 +185,12 @@ module.exports = function (grunt) {
             }
         },
         "build": {
-            "name"              : "a.bible",
+            "name"              : "wbible",
             "staging"           : staging
         },
         "git": {
             "www": {
-                "repo"      : "../a.bible",    // TODO user configurable?
+                "repo"      : "../wbible",    // TODO user configurable?
                 "branch"    : grunt.option("www-branch") || ""
             },
             "shell": {

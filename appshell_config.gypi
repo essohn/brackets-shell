@@ -1,5 +1,5 @@
 {
   'variables': {
-    'appname': "a.bible"
+    'appname': "wbible"
   }
 }
