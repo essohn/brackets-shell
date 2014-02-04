@@ -1254,6 +1254,20 @@ void DragWindow(CefRefPtr<CefBrowser> browser)
         [win setFrameOrigin:offset];
         [win displayIfNeeded];
     }
+    
+}
+
+// Clipboard function
+
+int32 CopyToClipboard(ExtensionString text)
+{
+    NSString *stringToWrite = [NSString stringWithUTF8String:text.c_str()];
+    
+    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+    [pasteboard clearContents];
+    [pasteboard writeObjects:[NSArray arrayWithObject:stringToWrite]];
+    
+    return NO_ERROR;
 }
 
 int32 GetArgvFromProcessID(int pid, NSString **argv);

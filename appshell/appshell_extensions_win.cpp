@@ -1818,6 +1818,17 @@ void DragWindow(CefRefPtr<CefBrowser> browser) {
     HWND browserHwnd = (HWND)getMenuParent(browser);
     SendMessage(browserHwnd, WM_NCLBUTTONDOWN, HTCAPTION, 0);
 }
+
+int32 CopyToClipboard(ExtensionString text) {
+    // Creates a data object.
+    IDataObject* myDataObject = new DataObject;
+    
+    // Stores a string, specifying the UnicodeText format.
+    myDataObject->SetData( IDataFormats::UnicodeText, text.c_str() );
+    
+    OleSetClipboard( myDataObject );
+
+}
     
 
 

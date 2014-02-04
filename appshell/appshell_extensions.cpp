@@ -679,10 +679,26 @@ public:
                 responseArgs->SetString(2, parentId);
                 responseArgs->SetInt(3, index);
             }
-        } else if (message_name == "DragWindow") {     
-            // Parameters: none       
+        } else if (message_name == "DragWindow") {
+            // Parameters: none
             DragWindow(browser);
-        } 
+        } else if (message_name == "CopyToClipboard") {
+            // Parameters:
+            //  0: int32 - callback id
+            //  1: string - filename
+            
+            if (argList->GetSize() != 2 ||
+                argList->GetType(1) != VTYPE_STRING) {
+                error = ERR_INVALID_PARAMS;
+            }
+            
+            if (error == NO_ERROR) {
+                ExtensionString text = argList->GetString(1);
+                
+                error = CopyToClipboard(text);
+                // No additional response args for this function
+            }
+        }
         else {
             fprintf(stderr, "Native function not implemented yet: %s\n", message_name.c_str());
             return false;

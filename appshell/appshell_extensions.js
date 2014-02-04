@@ -807,6 +807,16 @@ if (!appshell.app) {
     appshell.app.dragWindow = function () {
         DragWindow();
     };
+
+    /**
+     * Copy to the clipboard
+     *
+     * @return None. 
+     */
+    native function CopyToClipboard();
+    appshell.app.copyToClipboard = function (text, callback) {
+        return CopyToClipboard(callback || _dummyCallback, text);
+    };
  
     // Alias the appshell object to brackets. This is temporary and should be removed.
     brackets = appshell;
